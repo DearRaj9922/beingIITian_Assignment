@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4F3ED;
+  /* From mockup */
+  --foreground: #171717;
+
+  /* User-provided colors */
+  --color-brand-primary: #A5C9ED;
+  --color-brand-secondary: #D1E4F8;
+  --color-btn: #5D5FEF;
+
+  /* UI Colors */
+  --color-panel: #ffffff;
+  --color-panel-dark: #252834;
+  /* Dark panel for training days */
+  --color-muted: rgb(240, 240, 240);
+  --color-text-muted: #666;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-btn: var(--color-btn);
+  --color-panel: var(--color-panel);
+  --color-panel-dark: var(--color-panel-dark);
+  --color-muted: var(--color-muted);
+  --color-text-muted: var(--color-text-muted);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom Scrollbar Styles  */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-primary) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-btn);
+}
