@@ -20,16 +20,30 @@ export default function StreakCalendar() {
 
     return (
         <div className="bg-white rounded-3xl p-6 shadow-sm border border-[#D1E4F8] h-full flex flex-col transition-all hover:shadow-md">
-            <div className="flex justify-between items-center mb-6">
-                <div className="flex items-center gap-3">
-                    <div className="p-2 bg-[#D1E4F8] rounded-xl text-[#5D5FEF]">
-                        <Calendar size={20} />
+            <div className="flex justify-between items-start md:items-center mb-6 gap-2">
+                <div className="flex items-start md:items-center gap-2 md:gap-3 xl:gap-4 flex-1 min-w-0">
+                    <div className="w-10 h-10 md:w-11 md:h-11 xl:w-12 xl:h-12 bg-[#D1E4F8] rounded-xl text-[#5D5FEF] shrink-0 flex items-center justify-center">
+                        <Calendar size={18} className="md:w-5 md:h-5" />
                     </div>
-                    <h2 className="text-xl font-bold text-gray-800">Streak Calendar</h2>
+
+                    <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-3 xl:gap-6">
+                        <h2 className="text-[17px] md:text-lg xl:text-xl font-black text-[#112F4E] tracking-tight leading-[1.15]">
+                            Streak<br className="block md:hidden" /> <span className="md:hidden"></span>Calendar
+                        </h2>
+
+                        <select
+                            className="bg-[#FAFCFF] border border-[#D1E4F8] text-[#112F4E] hover:bg-[#E2EEFA] text-[10px] md:text-xs xl:text-sm font-bold rounded-lg px-2 py-0.5 md:px-3 md:py-1 outline-none cursor-pointer transition-colors shadow-sm focus:ring-2 focus:ring-[#A5C9ED] w-fit"
+                        >
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
                 </div>
-                <div className="text-right">
-                    <span className="block text-2xl font-black text-[#5D5FEF]">124 Days</span>
-                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Current Streak</span>
+
+                <div className="text-right shrink-0">
+                    <span className="block text-[19px] md:text-2xl font-black text-[#5D5FEF] leading-tight">124 Days</span>
+                    <span className="text-[8px] md:text-[10px] xl:text-xs font-semibold text-gray-500 uppercase tracking-widest mt-0.5 md:mt-0 font-bold">Current Streak</span>
                 </div>
             </div>
 

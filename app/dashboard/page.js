@@ -32,7 +32,7 @@ export default async function Dashboard() {
                             <AvatarStats />
                         </div>
                         <div className="md:col-span-1 flex flex-col min-h-[400px] md:h-[400px]">
-                            <ProfileCard />
+                            <ProfileCard studentData={JSON.parse(studentDataCookie.value)} />
                         </div>
 
                         {/* Bottom Row */}
